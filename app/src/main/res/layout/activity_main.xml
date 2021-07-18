@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/tvRespuesta"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="300dp"
+        android:gravity="center"
+        android:text="Hello World!"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvRespuesta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="35dp"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnNumTelefono"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:text="Obtener numero telefono"
+                android:textColor="@android:color/white"
+                app:backgroundTint="#FF5722"
+                android:onClick="obtenerNumero"/>
+
+            <Button
+                android:id="@+id/btnIMEI"
+                android:layout_marginLeft="5dp"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="match_parent"
+                android:text="Obtener IMEI"
+                android:textColor="@android:color/white"
+                app:backgroundTint="#FF5722"
+                android:onClick="obtenerIMEI"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="35dp"
+            android:layout_height="match_parent" >
+            <Button
+                android:id="@+id/btnNumTelefonoGoogle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:text="Obtener numero telefono google"
+                android:textColor="@android:color/white"
+                app:backgroundTint="#FF5722"
+                android:onClick="obtenerNumeroGoogle"/>
+
+            <Button
+                android:id="@+id/btnAndroidID"
+                android:layout_marginLeft="5dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:text="Obtener Android ID"
+                android:textColor="@android:color/white"
+                app:backgroundTint="#FF5722"
+                android:onClick="obtenerAndroidID"/>
+        </TableRow>
+
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
